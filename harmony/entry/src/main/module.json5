@@ -1,0 +1,43 @@
+{
+  "module": {
+    "name": "entry",
+    "type": "entry",
+    "description": "$string:module_desc",
+    "mainElement": "EntryAbility",
+    "deviceTypes": ["phone"],
+    "deliveryWithInstall": true,
+    "installationFree": false,
+    "pages": "$profile:main_pages",
+    "requestPermissions": [
+      // Biometric / lock-screen auth for Tier 2–3 (system_grant).
+      { "name": "ohos.permission.ACCESS_BIOMETRIC" },
+      // Hide secure screens from screenshots and recents.
+      { "name": "ohos.permission.PRIVACY_WINDOW" }
+    ],
+    "abilities": [
+      {
+        "name": "EntryAbility",
+        "srcEntry": "./ets/entryability/EntryAbility.ets",
+        "description": "$string:EntryAbility_desc",
+        "icon": "$media:layered_image",
+        "label": "$string:EntryAbility_label",
+        "startWindowIcon": "$media:startIcon",
+        "startWindowBackground": "$color:start_window_background",
+        "exported": true,
+        "launchType": "singleton",
+        "skills": [
+          {
+            "entities": ["entity.system.home"],
+            "actions": ["ohos.want.action.home"]
+          },
+          {
+            // voicebank://qr | rates | branches | balance | freeze | transfer?payee=&amount=
+            "entities": ["entity.system.browsable"],
+            "actions": ["ohos.want.action.viewData"],
+            "uris": [{ "scheme": "voicebank" }]
+          }
+        ]
+      }
+    ]
+  }
+}

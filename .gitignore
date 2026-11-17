@@ -1,0 +1,24 @@
+# macOS
+.DS_Store
+
+# iOS (project is generated from ios/project.yml by XcodeGen)
+ios/build/
+ios/*.xcodeproj/
+DerivedData/
+*.xcuserstate
+
+# Android
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+android/.idea/
+android/.kotlin/
+*.iml
+
+# HarmonyOS
+harmony/oh_modules/
+harmony/.hvigor/
+harmony/**/build/
+harmony/local.properties
+harmony/.idea/

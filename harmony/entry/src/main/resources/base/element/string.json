@@ -1,0 +1,7 @@
+{
+  "string": [
+    { "name": "module_desc", "value": "VoiceBank demo banking (mock data only)" },
+    { "name": "EntryAbility_desc", "value": "VoiceBank main ability" },
+    { "name": "EntryAbility_label", "value": "VoiceBank" }
+  ]
+}

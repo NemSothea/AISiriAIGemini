@@ -1,0 +1,47 @@
+name: VoiceBank
+options:
+  bundleIdPrefix: com.example.voicebank
+  deploymentTarget:
+    iOS: "18.0"
+  createIntermediateGroups: true
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    MARKETING_VERSION: "0.1.0"
+    CURRENT_PROJECT_VERSION: "1"
+    DEVELOPMENT_TEAM: ""
+targets:
+  VoiceBank:
+    type: application
+    platform: iOS
+    sources:
+      - path: VoiceBank
+    info:
+      path: VoiceBank/Resources/Info.plist
+      properties:
+        CFBundleDisplayName: VoiceBank
+        UILaunchScreen: {}
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: false
+        NSFaceIDUsageDescription: VoiceBank uses Face ID to protect balances, card controls and transfers.
+        NSMicrophoneUsageDescription: VoiceBank listens only while the voice button is active, to understand your banking command.
+        NSSpeechRecognitionUsageDescription: VoiceBank turns your voice command into text on this device. Audio is not sent to a server.
+        CFBundleURLTypes:
+          - CFBundleURLName: com.example.voicebank
+            CFBundleURLSchemes: [voicebank]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.voicebank
+        TARGETED_DEVICE_FAMILY: "1"
+        CODE_SIGN_STYLE: Automatic
+  VoiceBankTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: VoiceBankTests
+    dependencies:
+      - target: VoiceBank
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.voicebank.tests
+        GENERATE_INFOPLIST_FILE: YES

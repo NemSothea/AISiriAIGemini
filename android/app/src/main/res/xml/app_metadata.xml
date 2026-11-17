@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AppFunctionAppMetadata xmlns:appfn="http://schemas.android.com/apk/androidx.appfunctions"
+    appfn:description="Demo banking app with mock data. Provides exchange rates, ATM/branch lookup, and opens secure screens for balance, card freeze and transfers.
+Operational Patterns:
+  - Call 'findPayee' first to resolve a payee name to a payeeId before calling 'prepareTransfer'.
+  - 'getExchangeRate' and 'findNearestBranches' return data that may be shown to the user.
+  - 'openBalance', 'requestCardFreeze', 'showReceiveQr' and 'prepareTransfer' return a PendingIntent; launch it so the user continues in the app.
+Constraints:
+  - Never state balances, transaction details or account numbers; this app does not return them to agents.
+  - Transfers go only to saved payees, max 100 USD, and are always confirmed by the user in the app with biometrics and PIN.
+  - Do not retry 'prepareTransfer' with a different payee if the payee is not found; ask the user instead."
+    appfn:displayDescription="@string/app_function_app_display_description" />

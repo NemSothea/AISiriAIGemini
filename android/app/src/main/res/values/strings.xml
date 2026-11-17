@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">VoiceBank</string>
+    <string name="app_function_app_description">Demo banking app. Public info (exchange rates, ATMs) can be answered directly. Balance, card controls and transfers only open the app, where the user verifies with biometrics.</string>
+    <string name="app_function_app_display_description">VoiceBank demo banking</string>
+</resources>

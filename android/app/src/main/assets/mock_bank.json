@@ -1,0 +1,30 @@
+{
+  "accounts": [
+    { "id": "acc-usd", "name": "Savings (USD)", "maskedNumber": "•••• 4821", "currency": "USD", "balance": 1250.75 },
+    { "id": "acc-khr", "name": "Riel Account", "maskedNumber": "•••• 7730", "currency": "KHR", "balance": 2450000 }
+  ],
+  "payees": [
+    { "id": "p-dara", "name": "Dara", "bank": "Demo Bank", "maskedAccount": "•••• 1102" },
+    { "id": "p-sokha", "name": "Sokha", "bank": "Demo Bank", "maskedAccount": "•••• 5590" },
+    { "id": "p-vanna", "name": "Vanna", "bank": "Other Bank (demo)", "maskedAccount": "•••• 8814" }
+  ],
+  "rates": [
+    { "pair": "USD/KHR", "buy": 4080, "sell": 4110, "asOf": "2026-11-17T08:00:00Z" },
+    { "pair": "THB/KHR", "buy": 118, "sell": 122, "asOf": "2026-11-17T08:00:00Z" },
+    { "pair": "EUR/USD", "buy": 1.06, "sell": 1.09, "asOf": "2026-11-17T08:00:00Z" }
+  ],
+  "branches": [
+    { "id": "b-1", "name": "Demo Branch – Daun Penh", "type": "branch", "address": "Norodom Blvd (demo)", "lat": 11.5700, "lng": 104.9250 },
+    { "id": "b-2", "name": "Demo ATM – Riverside", "type": "atm", "address": "Sisowath Quay (demo)", "lat": 11.5730, "lng": 104.9310 },
+    { "id": "b-3", "name": "Demo ATM – BKK1", "type": "atm", "address": "Street 51 (demo)", "lat": 11.5530, "lng": 104.9230 },
+    { "id": "b-4", "name": "Demo Branch – Toul Kork", "type": "branch", "address": "Street 289 (demo)", "lat": 11.5800, "lng": 104.8930 }
+  ],
+  "cards": [
+    { "id": "card-1", "name": "Debit Card", "maskedNumber": "•••• •••• •••• 3388", "frozen": false }
+  ],
+  "transactions": [
+    { "id": "t-1", "date": "2026-11-16T10:12:00Z", "detail": "Coffee shop (demo)", "amount": -3.50, "currency": "USD" },
+    { "id": "t-2", "date": "2026-11-15T14:40:00Z", "detail": "Salary (demo)", "amount": 850.00, "currency": "USD" },
+    { "id": "t-3", "date": "2026-11-14T09:05:00Z", "detail": "Electricity bill (demo)", "amount": -42.10, "currency": "USD" }
+  ]
+}
