@@ -153,7 +153,7 @@ Working app name: **"VoiceBank"** (neutral demo name; no real bank branding).
 | Phase | Scope | Done when |
 |-------|-------|-----------|
 | **0. Environment** ✅ partial | Xcode 27 + sims ✅, Android Studio + API 36/37 ✅, DevEco Studio ❌, devices ❌, accounts ❌ | All toolchains + 1 real device per platform; Gemini preview applied |
-| **1. iOS rework** 🟡 built, touch-flow not yet verified | Replace VoiceTasks scaffold: domain model, mock fixtures, 5 screens, auth gate, audit log | D1–D5 work by touch in simulator with Face ID simulation |
+| **1. iOS rework** ✅ D1–D5 verified on iPhone 18 Pro simulator (iOS 27) on 2026-11-22 by deep link + UI automation with simulated Face ID; home-tile taps not exercised | Replace VoiceTasks scaffold: domain model, mock fixtures, 5 screens, auth gate, audit log | D1–D5 work by touch in simulator with Face ID simulation |
 | **2. iOS Siri** 🟡 6 intents + payee entity built, metadata verified; needs real-iPhone voice test | 5 intents + payee entity + shortcuts, tier gating | D1–D5 by Siri on real iPhone; Tier 2–3 never speak data |
 | **3. Android core + AppFunctions** 🟡 built; 7 AppFunctions in generated schema; deep links + auth gate verified on API 36 emulator; `list-app-functions` unavailable on that image | Same model/screens; AppFunctions; deep links | `list-app-functions` shows functions; deep links pass D1–D5 |
 | **4. Gemini** | Connected Console tester track | Gemini runs D2 + D5 (draft → app) for a tester |

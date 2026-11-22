@@ -20,6 +20,7 @@ import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
@@ -67,7 +68,8 @@ fun VoiceBankRoot(
                     BankAction.Branches -> BranchesScreen(onBack)
                     BankAction.Balance -> BalanceScreen(onBack)
                     BankAction.FreezeCard -> CardScreen(onBack)
-                    is BankAction.Transfer -> TransferScreen(route.payee, route.amount, onBack)
+                    // key(route): a new voice/deep-link transfer must reset the form, never reuse a stale draft.
+                    is BankAction.Transfer -> key(route) { TransferScreen(route.payee, route.amount, onBack) }
                 }
             }
             else -> HomeScreen(onNavigate = onNavigate, onAudit = { showAudit = true }, onVoice = { showVoice = true })
